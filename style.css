@@ -31,14 +31,14 @@ nav a {
 }
 
 .container {
-    max-width: 1400px;   /* Or 900px for wider view */
+    max-width: 1000px;   /* Or 900px for wider view */
     margin: 2rem auto;  /* Top-bottom: 2rem, left-right: auto */
     padding: 0 1rem;    /* Optional inner padding */
 }
 
 
 img.profile {
-    width: 700px;
+    width: 500px;
     float: right;
     margin-left: 2rem;
     border-radius: 10px;
