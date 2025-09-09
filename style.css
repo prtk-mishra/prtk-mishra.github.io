@@ -1,45 +1,191 @@
-
-
-body {
-    font-family: "Segoe UI", sans-serif;
-    font-size: 20px;   /* Default was 16px */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+/* ========== Global ========== */
+:root{
+  --sidebar-width: 300px; /* Resize the left column here */
+  --gap: 2rem;
+  --bg: #f8f8f8;
+  --card: #ffffff;
+  --text: #333;
+  --brand: #f5bc02;
+  --link: #1a73e8;
 }
 
-header {
-    background-color: #f5bc02;
-    color: black;
-    
-    padding: 1rem;
-    text-align: center;
-    
-}
-nav {
-    background-color: #e1e1e1;
-    padding: 0.5rem;
-    text-align: center;
-}
-nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #7fa5d6;
-    font-weight: bold;
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    max-width: 1000px;   /* Or 900px for wider view */
-    margin: 2rem auto;  /* Top-bottom: 2rem, left-right: auto */
-    padding: 0 1rem;    /* Optional inner padding */
+body{
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
 }
 
+/* Header */
+.site-header{
+  background: var(--brand);
+  color: #000;
+  padding: 1rem;
+  text-align: center;
+}
 
-img.profile {
-    width: 500px;
-    float: right;
-    margin-left: 2rem;
-    border-radius: 10px;
+/* Footer */
+.site-footer{
+  text-align: center;
+  padding: 1rem 0 2rem;
+  color: #666;
+}
+
+/* ========== Layout ========== */
+.layout{
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: var(--gap);
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 2rem auto;
+}
+
+/* Sidebar (left) */
+.sidebar{
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  position: sticky;
+  top: 1rem;             /* sticks below header while scrolling */
+  height: fit-content;   /* grows with content but can stick */
+}
+
+.profile-pic{
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.name{
+  margin: 0.25rem 0 0.25rem;
+  /* text-align: center;  */
+}
+
+.tagline{
+  margin: 0 0 0.75rem;
+  color: #666;
+  font-size: 0.95rem;
+  /* text-align: center;  */
+}
+
+/* Quick links block */
+.quick-links{
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.5rem 0 1rem;
+}
+.quick-links a{
+  text-decoration: none;
+  color: var(--link);
+  word-break: break-word;
+}
+
+/* Side navigation */
+.sidenav{
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.sidenav a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+}
+.sidenav a:hover{
+  background: #f1f1f1;
+}
+.sidenav a.active{
+  background: #e9f2ff;
+  color: #0b57d0;
+  font-weight: 600;
+}
+
+/* Content (right) */
+.content{
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 2rem;
+  min-width: 0; /* prevent overflow in grid */
+  text-align: justify;
+}
+
+.content h2{
+  margin-top: 0;
+}
+
+/* Projects list */
+.project-list{
+  padding-left: 1rem;
+}
+.project-list li{
+  margin: 0 0 1.25rem 0;
+}
+.project-list h3{
+  margin: 0 0 0.25rem 0;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 960px){
+  :root{ --sidebar-width: 260px; }
+}
+
+@media (max-width: 768px){
+  .layout{
+    grid-template-columns: 1fr;
+  }
+  .sidebar{
+    position: relative;
+    top: 0;
+  }
+}
+/* Top navigation (inside right column) */
+.topnav {
+  /* background-color: #f0a76b; */
+ 
+
+
+  padding: 0.75rem 11rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  text-align: left;   /* change to center or right if preferred */
+}
+
+.topnav a {
+  
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+}
+
+.topnav a:hover {
+  color: #0b57d0;
+}
+
+.topnav a.active {
+  color: #0b57d0;
+  border-bottom: 2px solid #0b57d0;
+}
+
+.welcome-gif {
+  max-width: 100%;   /* makes sure it doesn't overflow */
+  height: auto;      /* keeps correct aspect ratio */
+  border-radius: 10px;  /* optional: rounded corners */
+  margin-top: 1rem;  /* spacing above */
+  text-align: right;
+  display: grid;
 }

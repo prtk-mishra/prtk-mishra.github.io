@@ -1,31 +1,97 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prateek Mishra</title>
+    <title>Prateek Mishra · About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/fevicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Prateek Mishra</h1>
+<header class="site-header">
+    <!-- <h1>Prateek Mishra PM</h1> -->
+<h1>
+    
+    </h1>
+
 </header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
+<nav class="topnav">
+      
+      <a class="active" href="index.html">About Me</a>
+      <a href="projects.html">Projects</a>
 </nav>
-<div class="container">
-
-    <h2>Welcome to my personal website</h2>
-    <img src="profile.jpg" alt="Profile Picture" class="profile">
-    <p>My name is Prateek Mishra.</p>
-	<br><br><br><br><br>
-	<li><a href="https://github.com/prtk-mishra/Notes.git" style="text-decoration: none">My Notes</a></li>
 
 
+<div class="layout">
+    <!-- Left Sidebar (appears on every page) -->
+     <aside class="sidebar">
+        <img src="images/profile.jpg" alt="Prateek Mishra" class="profile-pic">
+        <h2 class="name">Prateek Mishra</h2>
+        <p class="tagline">Photonics Researcher</p>
+
+        <div class="quick-links">
+            <a href="mailto:erprtk5@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/prateek-mishra-bb4b206b" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=Xom17NoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/prtk-mishra" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <!--
+        <nav class="sidenav">
+            <a href="index.html">Home</a>
+            <a class="active" href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+        </nav> -->
+    </aside>
+
+    <!-- Right Content -->
+    <main class="content">
+        <h2>Welcome to my personal website!</h2>
+        <p> Hi! I’m Prateek...</p>
+        <p> I am a Photonics Researcher with deep interest in Terahertz Photonics, metasurfaces, and photonic integrated circuits (PIC), with growing focus on PDK-driven design flows.
+        </p> 
+        Currently I am an Assistant Professor at Siksha 'O' Anusandhan (SOA) University in Bhubaneswar (India).
+        </p>     
+        <p>
+            <b>Research Interests</b>
+            </p>
+        <p>
+        My current research focus is on integrated photonics, designing and simulating optical waveguides, couplers, modulators, and antennas that can be fabricated on chip-scale platforms like silicon photonics and lithium niobate. I am very much excited about terahertz photonic integrated circuits, where optics meets high-frequency electronics to enable applications in imaging, spectroscopy, and next-generation communications.
+        I am keen on designing PICs with process design kits (PDKs), automation, and circuit simulation tools, as they form the bridge between creative device concepts and practical foundry-ready photonic chips. My long-term vision is to contribute to the development of compact, energy-efficient, and scalable photonic systems that can be deployed in computing, sensing, and quantum technologies.
+        </p>     
+        <p>
+        <b>Education</b> </p>
+        <p>
+        I did my undergraduate degree in Engineering in Electronics and Communication (B.Tech) at <a href="https://www.jssaten.ac.in/" target="_blank" rel="noopener" style="text-decoration: none">JSS Academy of Technical Education</a>, Noida (India). 
+        I cracked GATE exam after which I got admission in <a href="https://www.iiita.ac.in/" target="_blank" rel="noopener" style="text-decoration: none">IIIT Allahabad</a>, Prayagraj (India) for Masters course in Microelectronics (M. Tech). 
+        After Masters, I started my PhD studies there (IIIT Allahabad). I completed my PhD in 2023 while working as an Assistant Professor in SOA University, Bhubaneswar (India). 
+        In my doctoral research in photonics, I worked extensively on metasurfaces, and nanophotonic device design, building a strong foundation in both theoretical concepts and experimental skills.
+        </p>
+            
+        
+        <p><b>Work Experience</b></p>
+
+        <p>
+        I took 1-year 'Extra-ordinary Leave' from SOA in 2024 when I got Institute of Eminence (IoE) Postdoctoral Fellowship from <a href="https://www.iisc.ac.in/" target="_blank" rel="noopener"style="text-decoration: none">IISc Bengaluru</a>.  
+        Duriring this, I worked on THz technology and nanofabrication. I built Terahertz spectroscopy setups, led the nanofabrication part, and worked on OAM beam generation with THz Metasurfaces in the <a href="http://teraquanta-researchlab.iisc.ac.in/" target="_blank" rel="noopener"style="text-decoration: none">TeraQuaNTA Lab</a> at IISc. <br></br>
+        
+        I have been part of diverse research projects, ranging from simulation-driven design of photonic devices to cleanroom fabrication and characterization. My experience includes working with tools like Lumerical, COMSOL, CST, Luceda IPKISS, and gdsfactory, as well as building terahertz spectroscopy setups. Python is my prefered language when it comes to data analysis, automation.
+        <br></br>I’ve taught and mentored undergraduate and PG students in subjects like optical fiber communication, semiconductor devices, and optoelectronics, and photonics. I have been exploring ways to bridge academic research with industry applications in photonic integrated circuits, preparing myself for roles where innovation meets real-world impact. 
+        </p>
+
+        <b>Miscellaneous</b></br>
+
+        I enjoy swimming, travelling, meeting new people, and I appreciate those people who know their work very well.</p>
+        <!--<img src="images/welcome.gif" alt="Welcome GIF" class="welcome-gif">-->
+    </main>
 </div>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Prateek Mishra</p>
+</footer>
+
+<script>
+  // Auto-update footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-

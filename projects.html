@@ -1,33 +1,73 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prateek Mishra</title>
+    <title>Prateek Mishra · Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/fevicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Prateek Mishra</h1>
+<header class="site-header">
+    <!-- <h1>Prateek Mishra</h1> -->
+     <h1>
+    
+    </h1>
 </header>
-<nav>
-   <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
 
-</nav>
-<div class="container">
+<nav class="topnav">
+      <a href="index.html">About Me</a>
+      <a class="active" href="projects.html">Projects</a>
+    </nav>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>Terahertz OAM Sources for 6G Communication</li>
-        
-        <li>Integrated Photonics</li>
-        <li>Metasurfaces</li>
-    </ul>
+<div class="layout">
+    <!-- Left Sidebar (same as about) -->
+    <aside class="sidebar">
+        <img src="images/profile2.jpg" alt="Prateek Mishra" class="profile-pic">
+        <h2 class="name">Prateek Mishra</h2>
+        <p class="tagline">Photonics Researcher</p>
 
+        <div class="quick-links">
+            <a href="mailto:erprtk5@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/prateek-mishra-bb4b206b" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=Xom17NoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/prtk-mishra" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <!-- <nav class="sidenav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a class="active" href="projects.html">Projects</a>
+        </nav> -->
+    </aside>
+
+    <!-- Right Content -->
+    <main class="content">
+        <h2>Projects</h2>
+        <ul class="project-list">
+            <p> <i>to be updated...</i></p>
+            <li>
+                <h3>Terahertz OAM Sources for 6G Communication</h3>
+                <p>Design and simulation of THz orbital angular momentum (OAM) sources for next-gen links.</p>
+            </li>
+            <li>
+                <h3>Integrated Photonics</h3>
+                <p>Tunable Photodetectors, Waveguides, MZIs, modulators.</p>
+            </li>
+            <li>
+                <h3>Metasurfaces</h3>
+                <p>Tunable metasurface design, modeling, and experimental validation.</p>
+            </li>
+        </ul>
+    </main>
 </div>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Prateek Mishra</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
